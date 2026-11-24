@@ -1,0 +1,13 @@
+prikaz "doskey" neco jako "alias" na Linuxu
+vytvori alias "nav" pro to co je za rovnase
+(alias "nav" a soubor "nav.exe" se mezi sebou "mlatit" nebudou)
+
+prikaz chcp 1250, nastavuje kodou stranku v konzoli ve windows aby to rozumelo diakritice
+viz. screenshoty
+
+
+chcp 1250 >nul && doskey nav=for /f "delims=" %i in ('nav.exe $*') do @cd /d "%i"
+
+chcp 1250 >nul && doskey nav=for /f "delims=" %i in ('C:\tools\nav.exe $*') do @cd /d "%i"
+
+chcp 1250 >nul && doskey nav=for /f "delims=" %i in ('C:\Users\DELL\Documents\Dev-Cpp\Mycd\nav.exe $*') do @cd /d "%i"
